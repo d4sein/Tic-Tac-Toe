@@ -113,7 +113,7 @@ def main():
 		if game.run(turn):
 			print(); game.show_table()
 
-			if not game.available:
+			if not game.available and turn == game.player:
 				print('Draw!')
 			else:
 				print('Player won!' if turn == game.player else 'Bot won!')
